@@ -29,3 +29,7 @@ window.application = {
 
   choiceCards: [],
 };
+
+window.addEventListener("load", (event) => {
+  window.application.renderScreen("select-level");
+});
