@@ -10,13 +10,20 @@
           align-items: center;
 }
 
+@font-face {
+  font-family: 'Stratos';
+  src: local("Stratos"), url("../fonts/stratos/Stratos-Regular.woff2") format("woff2"), url("../fonts/stratos/Stratos-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   color: #004980;
-  font-family: "Stratos";
+  font-family: Stratos, 'Open Sans', sans-serif;
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
 }
 
 .app {
@@ -42,7 +49,48 @@
 }
 
 .level-popup__header {
+  width: 208px;
+  height: 96px;
   font-size: 40px;
   line-height: 48px;
+  text-align: center;
+}
+
+.level-popup__select-level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 24px;
+}
+
+.level-popup__select-btn {
+  width: 98px;
+  height: 98px;
+  font-size: 64px;
+  line-height: 72px;
+  border-radius: 12px;
+  border: none;
+}
+
+.level-popup__start-btn {
+  width: 246px;
+  height: 50px;
+  background: #7AC100;
+  border-radius: 12px;
+  font-size: 24px;
+  line-height: 32px;
+  border: none;
+  color: white;
+}
+
+@font-face {
+  font-family: 'Stratos';
+  src: local("Stratos"), url("../fonts/stratos/Stratos-Regular.woff2") format("woff2"), url("../fonts/stratos/Stratos-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 /*# sourceMappingURL=style.css.map */

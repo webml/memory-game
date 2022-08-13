@@ -1,12 +1,20 @@
 @import "blocks";
 
+@font-face {
+    font-family: 'Stratos';
+    src: local('Stratos'), url('../fonts/stratos/Stratos-Regular.woff2') format('woff2'),
+        url('../fonts/stratos/Stratos-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   color: #004980;
-  font-family: "Stratos";
+  font-family: Stratos, 'Open Sans', sans-serif;
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
 }
 
 .app {
@@ -27,7 +35,36 @@
   box-sizing: border-box;
 
   &__header {
+    width: 208px;
+    height: 96px;
     font-size: 40px;
     line-height: 48px;
+    text-align: center;
+  }
+
+  &__select-level {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  &__select-btn {
+    width: 98px;
+    height: 98px;
+    font-size: 64px;
+    line-height: 72px;
+    border-radius: 12px;
+    border: none;
+  }
+
+  &__start-btn {
+    width: 246px;
+    height: 50px;
+    background: #7AC100;
+    border-radius: 12px;
+    font-size: 24px;
+    line-height: 32px;
+    border: none;
+    color: white;
   }
 }
