@@ -1,5 +1,13 @@
 @import "blocks";
 
+@font-face {
+    font-family: 'Stratos';
+    src: local('Stratos'), url('../fonts/stratos/Stratos-Regular.woff2') format('woff2'),
+        url('../fonts/stratos/Stratos-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -64,12 +72,4 @@
     border: none;
     color: white;
   }
-}
-
-@font-face {
-    font-family: 'Stratos';
-    src: local('Stratos'), url('../fonts/stratos/Stratos-Regular.woff2') format('woff2'),
-        url('../fonts/stratos/Stratos-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 }

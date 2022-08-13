@@ -10,15 +10,12 @@
           align-items: center;
 }
 
-.error {
-  position: absolute;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: none;
-  background-color: white;
-  color: black;
-  -webkit-box-shadow: 0 0 20px lightblue;
-          box-shadow: 0 0 20px lightblue;
+@font-face {
+  font-family: 'Stratos';
+  src: local("Stratos"), url("../fonts/stratos/Stratos-Regular.woff2") format("woff2"), url("../fonts/stratos/Stratos-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 * {
@@ -97,10 +94,14 @@
   color: white;
 }
 
-@font-face {
-  font-family: 'Stratos';
-  src: local("Stratos"), url("../fonts/stratos/Stratos-Regular.woff2") format("woff2"), url("../fonts/stratos/Stratos-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+.error {
+  position: absolute;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: white;
+  color: black;
+  -webkit-box-shadow: 0 0 20px lightblue;
+          box-shadow: 0 0 20px lightblue;
+
 /*# sourceMappingURL=style.css.map */
