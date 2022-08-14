@@ -21,11 +21,18 @@
           box-shadow: 0 0 20px lightblue;
 }
 
+@font-face {
+  font-family: "Stratos";
+  src: local("Stratos"), url("../fonts/stratos/Stratos-Regular.woff2") format("woff2"), url("../fonts/stratos/Stratos-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   color: #004980;
-  font-family: Stratos, 'Open Sans', sans-serif;
+  font-family: Stratos, "Open Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -83,24 +90,17 @@
 .level-popup__select-btn_active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 4px solid #7AC100;
+  border: 4px solid #7ac100;
 }
 
 .level-popup__start-btn {
   width: 246px;
   height: 50px;
-  background: #7AC100;
+  background: #7ac100;
   border-radius: 12px;
   font-size: 24px;
   line-height: 32px;
   border: none;
   color: white;
-}
-
-@font-face {
-  font-family: 'Stratos';
-  src: local("Stratos"), url("../fonts/stratos/Stratos-Regular.woff2") format("woff2"), url("../fonts/stratos/Stratos-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 /*# sourceMappingURL=style.css.map */
