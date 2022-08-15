@@ -1,37 +1,38 @@
 {
-    "name": "memorycardgame",
-    "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
-    "scripts": {
-        "format": "prettier --write .",
-        "lint:js": "eslint ./src/**/*.js",
-        "lint:scss": "stylelint ./src/**/*.scss",
-        "prepare": "husky install",
-        "lint": "npm run lint:js && npm run lint:scss"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/webml/skypro-cardMemoryGame.git"
-    },
-    "author": "Michael Lubarets / t.me/lumek",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/webml/skypro-cardMemoryGame/issues"
-    },
-    "homepage": "https://github.com/webml/skypro-cardMemoryGame#readme",
-    "devDependencies": {
-        "eslint": "^8.21.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "husky": "^8.0.1",
-        "postcss": "^8.4.16",
-        "postcss-scss": "^4.0.4",
-        "prettier": "^2.7.1",
-        "stylelint": "^14.10.0",
-        "stylelint-config-prettier": "^9.0.3",
-        "stylelint-config-standard": "^27.0.0",
-        "stylelint-prettier": "^2.0.0",
-        "stylelint-scss": "^4.3.0"
-    }
+  "name": "memorycardgame",
+  "version": "1.0.0",
+  "description": "study project in skypro",
+  "main": "app.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint:js": "eslint ./src/**/*.js",
+    "lint:scss": "stylelint ./src/**/*.scss",
+    "lint:scss:fix": "stylelint ./src/**/*.scss --fix",
+    "prepare": "husky install",
+    "lint": "npm run lint:js && npm run lint:scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webml/skypro-cardMemoryGame.git"
+  },
+  "author": "Michael Lubarets / t.me/lumek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webml/skypro-cardMemoryGame/issues"
+  },
+  "homepage": "https://github.com/webml/skypro-cardMemoryGame#readme",
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "postcss-scss": "^4.0.4",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.10.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^27.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.3.0"
+  }
 }

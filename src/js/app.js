@@ -19,7 +19,7 @@ window.application = {
 
         window.application.blocks[blockName](container, content, className);
     },
-    time: null,
+    time: "00.00",
 
     level: null,
 

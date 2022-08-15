@@ -68,16 +68,20 @@ const renderActiveBtnBlock = (container, content, className) => {
                 }
                 case 1: {
                     console.log("level 1");
+                    window.application.level = 6;
+                    window.application.renderScreen("game");
                     break;
                 }
-
                 case 2: {
                     console.log("level 2");
+                    window.application.level = 12;
+                    window.application.renderScreen("game");
                     break;
                 }
-
                 case 3: {
                     console.log("level 3");
+                    window.application.level = 18;
+                    window.application.renderScreen("game");
                     break;
                 }
             }
@@ -88,3 +92,73 @@ const renderActiveBtnBlock = (container, content, className) => {
 };
 
 window.application.blocks["active-btn"] = renderActiveBtnBlock;
+
+const renderGameBarBlock = (container) => {
+    const gameBar = document.createElement("div");
+    gameBar.classList.add("game-bar");
+
+    window.application.renderBlock("timer", gameBar);
+
+    window.application.renderBlock(
+        "active-btn",
+        gameBar,
+        "Начать заново",
+        "game-bar__restart-btn"
+    );
+
+    container.appendChild(gameBar);
+};
+
+window.application.blocks["game-bar"] = renderGameBarBlock;
+
+const renderTimerBlock = (container) => {
+    const timer = document.createElement("div");
+    timer.classList.add("game-bar__timer");
+
+    const timerDesc = document.createElement("div");
+    timerDesc.classList.add("game-bar__timer-description");
+    timer.appendChild(timerDesc);
+
+    const min = document.createElement("p");
+    min.textContent = "min";
+    timerDesc.appendChild(min);
+
+    const sec = document.createElement("p");
+    sec.textContent = "sec";
+    timerDesc.appendChild(sec);
+
+    const time = document.createElement("p");
+    time.classList.add("game-bar__timer-time");
+    time.textContent = window.application.time;
+    timer.appendChild(time);
+    container.appendChild(timer);
+};
+
+window.application.blocks["timer"] = renderTimerBlock;
+
+const renderCardsBlock = (container) => {
+    const cards = document.createElement("div");
+    cards.classList.add("cards");
+
+    let cardsId = 0;
+
+    do {
+        window.application.renderBlock("card", cards, cardsId);
+        cardsId++;
+    } while (cardsId !== window.application.level);
+
+    container.appendChild(cards);
+};
+
+window.application.blocks["cards"] = renderCardsBlock;
+
+const renderCardBlock = (container, content) => {
+    const card = document.createElement("img");
+    card.src = "./src/img/card_back.png";
+    card.classList.add("card");
+    card.id = content;
+
+    container.appendChild(card);
+};
+
+window.application.blocks["card"] = renderCardBlock;

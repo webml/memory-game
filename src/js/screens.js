@@ -24,3 +24,16 @@ const renderSelectLevelScreen = () => {
 };
 
 window.application.screens["select-level"] = renderSelectLevelScreen;
+
+const renderGameScreen = () => {
+    const gameScreen = document.createElement("div");
+    gameScreen.classList.add("game-screen");
+
+    window.application.renderBlock("game-bar", gameScreen);
+
+    window.application.renderBlock("cards", gameScreen);
+
+    app.appendChild(gameScreen);
+};
+
+window.application.screens["game"] = renderGameScreen;
