@@ -1,15 +1,26 @@
 .centre {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .error {
-  position: absolute;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: none;
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 20px lightblue;
+    position: absolute;
+    padding: 8px 16px;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 20px lightblue;
+}
+
+.btn {
+    width: 246px;
+    height: 50px;
+    color: white;
+    font-size: 24px;
+    line-height: 32px;
+    background: #7ac100;
+    border: none;
+    border-radius: 12px;
 }
