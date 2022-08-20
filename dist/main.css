@@ -1,3 +1,6 @@
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
+  \*********************************************************************/
 .centre, .app, .level-popup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,7 +39,7 @@
   font-weight: normal;
   font-family: Stratos;
   font-style: normal;
-  src: local("Stratos"), url("../fonts/stratos/Stratos-Regular.woff2") format("woff2"), url("../fonts/stratos/Stratos-Regular.woff") format("woff");
+  src: local("Stratos"), url(ec4882423f79afa46408.woff2) format("woff2"), url(d20eb275042a513c8d55.woff) format("woff");
 }
 
 * {
@@ -164,3 +167,5 @@
   width: 95px;
 }
 /*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=main.css.map*/

@@ -19,6 +19,7 @@
 
 .app {
     @extend .centre;
+
     height: 100vh;
     background-color: #004980;
 }
@@ -98,6 +99,7 @@
 
     &__restart-btn {
         @extend .btn;
+
         margin-top: 24px;
     }
 }
@@ -106,10 +108,9 @@
     padding: 48px 0;
     height: 282px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     align-content: center;
     gap: 16px;
-    flex-wrap: wrap;
 }
 
 .card {
