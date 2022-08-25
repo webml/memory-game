@@ -1,38 +1,49 @@
 {
-  "name": "memorycardgame",
-  "version": "1.0.0",
-  "description": "study project in skypro",
-  "main": "app.js",
-  "scripts": {
-    "format": "prettier --write .",
-    "lint:js": "eslint ./src/**/*.js",
-    "lint:scss": "stylelint ./src/**/*.scss",
-    "lint:scss:fix": "stylelint ./src/**/*.scss --fix",
-    "prepare": "husky install",
-    "lint": "npm run lint:js && npm run lint:scss"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/webml/skypro-cardMemoryGame.git"
-  },
-  "author": "Michael Lubarets / t.me/lumek",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/webml/skypro-cardMemoryGame/issues"
-  },
-  "homepage": "https://github.com/webml/skypro-cardMemoryGame#readme",
-  "devDependencies": {
-    "eslint": "^8.22.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
-    "postcss-scss": "^4.0.4",
-    "prettier": "^2.7.1",
-    "stylelint": "^14.10.0",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^27.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-prettier": "^2.0.0",
-    "stylelint-scss": "^4.3.0"
-  }
+    "name": "memorycardgame",
+    "version": "1.0.0",
+    "description": "study project in skypro",
+    "main": "app.js",
+    "scripts": {
+        "format": "prettier --write .",
+        "lint:js": "eslint ./src/**/*.js",
+        "lint:scss": "stylelint ./src/**/*.scss",
+        "lint:scss:fix": "stylelint ./src/**/*.scss --fix",
+        "prepare": "husky install",
+        "lint": "npm run lint:js && npm run lint:scss",
+        "build": "set NODE_ENV=production && webpack",
+        "start": "webpack-dev-server --open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/webml/skypro-cardMemoryGame.git"
+    },
+    "author": "Michael Lubarets / t.me/lumek",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/webml/skypro-cardMemoryGame/issues"
+    },
+    "homepage": "https://github.com/webml/skypro-cardMemoryGame#readme",
+    "devDependencies": {
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.7.1",
+        "css-minimizer-webpack-plugin": "^4.0.0",
+        "eslint": "^8.22.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "html-webpack-plugin": "^5.5.0",
+        "husky": "^8.0.1",
+        "mini-css-extract-plugin": "^2.6.1",
+        "postcss-scss": "^4.0.4",
+        "prettier": "^2.7.1",
+        "style-loader": "^3.3.1",
+        "stylelint": "^14.10.0",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-standard": "^27.0.0",
+        "stylelint-order": "^5.0.0",
+        "stylelint-prettier": "^2.0.0",
+        "stylelint-scss": "^4.3.0",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.10.0"
+    }
 }

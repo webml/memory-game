@@ -1,6 +1,6 @@
-/*global app*/
+import { app } from "./app";
 
-const renderSelectLevelScreen = () => {
+export const renderSelectLevelScreen = () => {
     const levelPopup = document.createElement("div");
     levelPopup.classList.add("level-popup");
 
@@ -25,13 +25,21 @@ const renderSelectLevelScreen = () => {
 
 window.application.screens["select-level"] = renderSelectLevelScreen;
 
-const renderGameScreen = () => {
+export const renderGameScreen = () => {
     const gameScreen = document.createElement("div");
     gameScreen.classList.add("game-screen");
 
     window.application.renderBlock("game-bar", gameScreen);
 
     window.application.renderBlock("cards", gameScreen);
+
+    setTimeout(() => {
+        const cards = document.getElementsByClassName("card");
+
+        for (const card of cards) {
+            card.src = "static/card_back.png";
+        }
+    }, 5000);
 
     app.appendChild(gameScreen);
 };

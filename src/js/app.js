@@ -1,4 +1,4 @@
-const app = document.querySelector(".app");
+export const app = document.querySelector(".app");
 
 window.application = {
     blocks: {},
@@ -27,7 +27,7 @@ window.application = {
 
     gameCards: [],
 
-    choiceCards: [],
+    choiceCards: null,
 };
 
 window.addEventListener("load", () => {
