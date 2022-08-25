@@ -46,7 +46,7 @@ export const renderHeaderBlock: renderFunction = (
 ) => {
     const header = document.createElement("h1");
 
-    if (className != undefined) {
+    if (className) {
         header.classList.add(className);
     }
 
@@ -84,13 +84,14 @@ export const renderSelectBtnBlock: renderFunction = (
     selectBtn.textContent = String(content);
 
     selectBtn.addEventListener("click", () => {
-        if (numberOfCards != undefined) {
+        if (numberOfCards) {
             window.application.level = numberOfCards;
         }
 
-        Array.from(
+        const selectButtons = Array.from(
             container.getElementsByClassName("level-popup__select-btn")
-        ).forEach((element) =>
+        );
+        selectButtons.forEach((element) =>
             element.classList.remove("level-popup__select-btn_active")
         );
 
@@ -109,7 +110,7 @@ export const renderActiveBtnBlock: renderFunction = (
 ) => {
     const activeBtn = document.createElement("button");
 
-    if (className != undefined) {
+    if (className) {
         activeBtn.classList.add(className);
     }
 
@@ -315,7 +316,8 @@ window.application.blocks["cards"] = renderCardsBlock;
 export const checkWin = () => {
     let result = true;
 
-    Array.from(document.getElementsByClassName("card")).forEach((card) => {
+    const cards = Array.from(document.getElementsByClassName("card"));
+    cards.forEach((card) => {
         if (card.attributes[0].value === "static/card_back.png") {
             result = false;
         }
@@ -336,7 +338,7 @@ export const renderCardBlock: renderFunction = (
 ) => {
     const card = document.createElement("img");
 
-    if (cardsFront != undefined) {
+    if (cardsFront) {
         card.src = cardsFront;
     }
 
