@@ -26,8 +26,8 @@ declare global {
             gameCards: string[];
 
             choiceCards: {
-                id: null | number;
-                src: null | string;
+                id: number | null;
+                src: string | null;
             };
         };
     }
@@ -56,7 +56,6 @@ window.application = window.application || {
     renderScreen: function (screenName) {
         for (let timer of window.application.timers) {
             clearTimeout(timer);
-            timer === undefined;
         }
         window.application.timers = [];
 
@@ -78,7 +77,7 @@ window.application = window.application || {
         cardsId,
         cardsFront
     ) {
-        if (window.application.blocks[blockName] === undefined) {
+        if (!window.application.blocks[blockName]) {
             console.log("Такой блок не существует");
         }
 
